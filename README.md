@@ -49,11 +49,11 @@ flwr run
 ## VRAM consumption
 
 We use models with 4-bit quantization as default. The estimated VRAM consumption per client for each challenge is shown below:
-
-|Models|SmolLM2-135M-Instruct (BS=16)|SmolLM2-360M-Instruct (BS=16) |SmolLM2-135M (BS=16)|SmolLM2-360M (BS=) |
-| :----: | :--------:                | :--------:                  | :--------:         | :--------:         |
-|VRAM    |           GB              |         7.48 GB             |       GB           |        GB          |
-|Comm    |             MB            |                MB           |         MB         |         MB         |
+7
+|Models|SmolLM2-135M-Instruct (BS=16)|SmolLM2-360M-Instruct (BS=16) |SmolLM2-135M (BS=16)|SmolLM2-360M (BS=16)|
+| :----: | :--------:                | :--------:                  | :--------:         | :--------:          |
+|VRAM    |             GB            |         7.20 GB             |         GB         |      7.28 GB        |
+|Comm    |             MB            |         2368.03 MB          |         MB         |           MB        |
 
 You can adjust the CPU/GPU resources you assign to each of the clients based on your device, which are specified with `options.backend.client-resources.num-cpus` and `options.backend.client-resources.num-gpus` under `[tool.flwr.federations.local-simulation]` entry in `pyproject.toml`.
 

@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "t-ioi-medical-smollm2"
+name = "t-ioi-code-smollm2"
 version = "1.0.0"
 description = ""
 license = "Apache-2.0"
@@ -27,8 +27,8 @@ packages = ["."]
 publisher = "zikaizhang"
 
 [tool.flwr.app.components]
-serverapp = "t_ioi_medical_smollm2.server_app:app"
-clientapp = "t_ioi_medical_smollm2.client_app:app"
+serverapp = "t_ioi_code_smollm2.server_app:app"
+clientapp = "t_ioi_code_smollm2.client_app:app"
 
 [tool.flwr.app.config]
 model.name = "HuggingFaceTB/SmolLM2-360M"
@@ -37,8 +37,8 @@ model.gradient-checkpointing = true
 model.lora.peft-lora-r = 8
 model.lora.peft-lora-alpha = 16
 train.save-every-round = 5
-train.learning-rate-max = 2e-4
-train.learning-rate-min = 6e-6
+train.learning-rate-max = 5e-5
+train.learning-rate-min = 1e-6
 train.seq-length = 512
 train.training-arguments.output-dir = ""
 train.training-arguments.learning-rate = ""
@@ -51,17 +51,17 @@ train.training-arguments.save-steps = 1000
 train.training-arguments.save-total-limit = 10
 train.training-arguments.gradient-checkpointing = true
 train.training-arguments.lr-scheduler-type = "constant"
-strategy.fraction-fit = 0.1
+strategy.fraction-fit = 0.2
 strategy.fraction-evaluate = 0.0
 num-server-rounds = 200
 
 [tool.flwr.app.config.static]
-dataset.name = "medalpaca/medical_meadow_medical_flashcards"
+dataset.name = "flwrlabs/code-alpaca-20k"
 
 [tool.flwr.federations]
 default = "local-simulation"
 
 [tool.flwr.federations.local-simulation]
-options.num-supernodes = 20
+options.num-supernodes = 10
 options.backend.client-resources.num-cpus = 2
 options.backend.client-resources.num-gpus = 1.0

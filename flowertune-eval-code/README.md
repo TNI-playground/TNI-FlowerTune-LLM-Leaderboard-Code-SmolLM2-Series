@@ -60,7 +60,7 @@ python main.py \
 --metric_output_path=./evaluation_results_humaneval.json # change dataset name based on your choice
 ```
 
-Download fine-tuned model from [Google Drive](), put everything under `results` directory
+Download fine-tuned model from [Google Drive](https://drive.google.com/drive/folders/1i1XHayths3OzXEQvd43RLAW2nvaGYKpL?usp=sharing), put everything under `results` directory
 
 ```bash
 cd /your_project_path/NI-FlowerTune-LLM-Leaderboard-Medical-SmolLM2-Series
@@ -73,7 +73,7 @@ bash script.sh
 | :--------:                       | :--------: | :--------: | :--------:  | :--------:    | :--------: |
 |SmolLM2-135M-Instruct (200Rounds) |  | | | | |
 |SmolLM2-135M (200Rounds)          |  | | | | |
-|SmolLM2-360M-Instruct (200Rounds) |  | | | | |
+|SmolLM2-360M-Instruct (200Rounds) |            |   17.68    |   12.42     | | |
 |SmolLM2-360M (200Rounds)          |  | | | | |
 
 The model answers and pass@1 scores will be saved to `generations_{dataset_name}.json` and `evaluation_results_{dataset_name}.json`, respectively.

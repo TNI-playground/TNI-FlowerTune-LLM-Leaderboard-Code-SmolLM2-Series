@@ -234,6 +234,12 @@ def main():
     transformers.logging.set_verbosity_error()
     datasets.logging.set_verbosity_error()
 
+    args.save_references_path = os.path.join('benchmark', args.save_references_path)
+    args.save_generations_path = os.path.join('benchmark', args.save_generations_path)
+    args.metric_output_path = os.path.join('benchmark', args.metric_output_path)
+
+    os.makedirs(os.path.dirname(args.save_references_path), exist_ok=True)
+
     if args.tasks is None:
         task_names = ALL_TASKS
     else:
@@ -405,6 +411,8 @@ def main():
         dumped = json.dumps(results, indent=2)
         if accelerator.is_main_process:
             print(dumped)
+
+        args.metric_output_path = f"{os.path.splitext(args.metric_output_path)[0]}_{task}.json"
 
         with open(args.metric_output_path, "w") as f:
             f.write(dumped)

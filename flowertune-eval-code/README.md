@@ -71,10 +71,10 @@ bash script.sh
 
 | Challenges                       | mbpp       |  humaneval |  multiple-js|  multiple-cpp |  Avg       |
 | :--------:                       | :--------: | :--------: | :--------:  | :--------:    | :--------: |
-|SmolLM2-135M-Instruct (200Rounds) |  | | | | |
-|SmolLM2-135M (200Rounds)          |  | | | | |
-|SmolLM2-360M-Instruct (200Rounds) |            |   17.68    |   12.42     | | |
-|SmolLM2-360M (200Rounds)          |  | | | | |
+|SmolLM2-135M-Instruct (200Rounds) |   7.20     |   5.48     |    5.59     |    4.96       |  5.80      |
+|SmolLM2-135M (200Rounds)          |   2.60     |   3.04     |    6.21     |    6.21       |  4.51s      |
+|SmolLM2-360M-Instruct (200Rounds) |  18.60     |   17.68    |   12.42     |    9.93       |  14.65     |
+|SmolLM2-360M (200Rounds)          |  17.20     |   14.02    |   11.80     |    8.69       |  12.92     |
 
 The model answers and pass@1 scores will be saved to `generations_{dataset_name}.json` and `evaluation_results_{dataset_name}.json`, respectively.
 

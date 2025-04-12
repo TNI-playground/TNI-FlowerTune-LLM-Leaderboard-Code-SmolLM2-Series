@@ -63,7 +63,7 @@ python main.py \
 Download fine-tuned model from [Google Drive](https://drive.google.com/drive/folders/1i1XHayths3OzXEQvd43RLAW2nvaGYKpL?usp=sharing), put everything under `results` directory
 
 ```bash
-cd /your_project_path/NI-FlowerTune-LLM-Leaderboard-Medical-SmolLM2-Series
+cd /your_project_path/NI-FlowerTune-LLM-Leaderboard-Code-SmolLM2-Series
 bash script.sh
 ```
 
@@ -72,7 +72,7 @@ bash script.sh
 | Challenges                       | mbpp       |  humaneval |  multiple-js|  multiple-cpp |  Avg       |
 | :--------:                       | :--------: | :--------: | :--------:  | :--------:    | :--------: |
 |SmolLM2-135M-Instruct (200Rounds) |   7.20     |   5.48     |    5.59     |    4.96       |  5.80      |
-|SmolLM2-135M (200Rounds)          |   2.60     |   3.04     |    6.21     |    6.21       |  4.51s      |
+|SmolLM2-135M (200Rounds)          |   2.60     |   3.04     |    6.21     |    6.21       |  4.51      |
 |SmolLM2-360M-Instruct (200Rounds) |  18.60     |   17.68    |   12.42     |    9.93       |  14.65     |
 |SmolLM2-360M (200Rounds)          |  17.20     |   14.02    |   11.80     |    8.69       |  12.92     |
 

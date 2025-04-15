@@ -46,6 +46,15 @@ The configs are defined in `[tool.flwr.app.config]` entry of `pyproject.toml`, a
 flwr run
 ```
 
+### Benchmark
+
+| Challenges                       | mbpp       |  humaneval |  multiple-js|  multiple-cpp |  Avg       |
+| :--------:                       | :--------: | :--------: | :--------:  | :--------:    | :--------: |
+|[SmolLM2-135M-Instruct](https://drive.google.com/drive/folders/1H-Ln1lzNcYJf6Vm8L12AIB40x4LANuhe?usp=drive_link) (200Rounds) |   7.20     |   5.48     |    5.59     |    4.96       |  5.80      |
+|[SmolLM2-135M](https://drive.google.com/drive/folders/13_NqzdhhjSGaAO9BTh0XDn9bNYQ7_VQP?usp=drive_link) (200Rounds)          |   2.60     |   3.04     |    6.21     |    6.21       |  4.51      |
+|[SmolLM2-360M-Instruct](https://drive.google.com/drive/folders/1xOaAqYpyEL72g4W8TjfgE86s3P9uT7cm?usp=drive_link) (200Rounds) |  18.60     |   17.68    |   12.42     |    9.93       |  14.65     |
+|[SmolLM2-360M](https://drive.google.com/drive/folders/17HRaRExcMr34BtumpS6gBA8btaVAYHRq?usp=drive_link) (200Rounds)          |  17.20     |   14.02    |   11.80     |    8.69       |  12.92     |
+
 ## VRAM consumption
 
 We use models with 4-bit quantization as default. The estimated VRAM consumption per client for each challenge is shown below:

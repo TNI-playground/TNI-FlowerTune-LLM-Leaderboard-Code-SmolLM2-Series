@@ -48,6 +48,8 @@ flwr run
 
 ### Benchmark
 
+All the experiments are conducted on a NVIDIA GeForce GTX 1080 (8 GB).
+
 | Challenges                       | mbpp       |  humaneval |  multiple-js|  multiple-cpp |  Avg       |
 | :--------:                       | :--------: | :--------: | :--------:  | :--------:    | :--------: |
 |[SmolLM2-135M-Instruct](https://drive.google.com/drive/folders/1H-Ln1lzNcYJf6Vm8L12AIB40x4LANuhe?usp=drive_link) (200Rounds) |   7.20     |   5.48     |    5.59     |    4.96       |  5.80      |
